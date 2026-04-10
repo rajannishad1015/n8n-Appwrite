@@ -1,17 +1,19 @@
 {
-  "name": "n8n",
+  "name": "auto-message-sender",
   "version": "1.0.0",
-  "description": "",
+  "description": "Free and fast automatic message sender for business",
   "main": "index.js",
   "scripts": {
-    "start": "n8n",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "send-email": "node index.js --channel=email",
+    "send-whatsapp": "node index.js --channel=whatsapp",
+    "send-sms": "node index.js --channel=sms"
   },
-  "keywords": [],
+  "keywords": ["messaging", "automation", "business"],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "n8n": "^2.4.6"
+    "nodemailer": "^6.9.7"
   }
 }
